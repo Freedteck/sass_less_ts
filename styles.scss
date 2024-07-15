@@ -1,0 +1,40 @@
+$nav-links-color: blue;
+$header-bg: grey;
+$text-color: black;
+
+@mixin flexbox() {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+@mixin buttonStyle() {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid white;
+  background-color: blue;
+  color: white;
+}
+
+body {
+  color: $text-color;
+}
+header {
+  background-color: $header-bg;
+  @include flexbox;
+  justify-content: space-between;
+}
+ul li {
+  color: $nav-links-color;
+}
+header {
+  div {
+    @include flexbox;
+    ul {
+      @include flexbox;
+      list-style: none;
+    }
+    button {
+      @include buttonStyle;
+    }
+  }
+}

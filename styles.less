@@ -1,0 +1,26 @@
+@text-color: #fff;
+@header-bg: grey;
+
+.flexbox () {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+header {
+  background-color: @header-bg;
+  justify-content: space-between;
+  .flexbox();
+
+  div {
+    .flexbox();
+
+    ul {
+      .flexbox();
+
+      li {
+        list-style: none;
+      }
+    }
+  }
+}
